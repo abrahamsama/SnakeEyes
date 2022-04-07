@@ -11,7 +11,6 @@ export default function Home() {
         <title>Snake Eyes Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
     <div className={styles.bgWrap}>
       <Image
         alt="Background"
@@ -22,6 +21,5 @@ export default function Home() {
       />
     </div>
   </div>
-    </div>
   )
 }
