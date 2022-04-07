@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+
 
 export default function Home() {
   return (
@@ -9,10 +11,17 @@ export default function Home() {
         <title>Snake Eyes Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        
-        </main>
+      <div>
+    <div className={styles.bgWrap}>
+      <Image
+        alt="Background"
+        src="/homepage.png"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+      />
+    </div>
+  </div>
     </div>
   )
 }
