@@ -11,15 +11,15 @@ export default function Home() {
         <title>Snake Eyes Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    <div className={styles.bgWrap}>
-      <Image
-        alt="Background"
-        src="/homepage.png"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
-    </div>
+      <div className={styles.main}>
+        <img
+          alt="Background"
+          src="/homepage.png"
+          width="100%"
+          height="100%"
+          quality={100}
+        />
+      </div>
   </div>
   )
 }
