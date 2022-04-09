@@ -6,6 +6,8 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
+    <div className={styles.homePage}>
+    <div className={styles.enterPortalOverlay}>
     <div className={styles.container}>
       <Head>
         <title>Snake Eyes Home</title>
@@ -71,7 +73,11 @@ export default function Home() {
             Press the sign to enter
           </h1>
         </div>
-
+    </div>
+    </div>
+    <div className={styles.mainHomePage}>
+    
+    </div>
     </div>
   );
 }
