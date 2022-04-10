@@ -2,24 +2,27 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: .05fr .05fr 0.05fr 1fr .01fr .5fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: .05fr .05fr 0.05fr 1fr .01fr;
+  margin-left: 10%;
+  margin-right: 10%;
 
   
 }
-
-.containerBtn{
-  transform: translate(-275%, 225%);
-  height: 75px;
-  width: 100px;
+.mainHomePage{
+  position:absolute;
+  filter: blur(3px);
+  background-color: black;
+  color:white;
 
 }
+
 .test{
   grid-row:3;
 }
 .logoGrid{
   display: grid;
-  grid-column: 5 /span 2;
+  grid-column: 3 /span 2;
   grid-row: 2/span 2;
 }
 
@@ -51,7 +54,7 @@
 }
 .gridBtn{
   grid-row: 4;
-  grid-column: 6;
+  grid-column: 4;
   z-index: 1;
   grid-template-rows: repeat(5, 1fr);
   display: grid;
@@ -64,23 +67,29 @@
 }
 .enterText{
   grid-row: 5;
-  grid-column: 3/span 4;
+  grid-column: 2/span 4;
   font-family: LG;
   font-size: 100%;
-  width:150%;
+  max-width: 100%;
   letter-spacing: 1px;
   animation: fade 6s;
+  background-color: black;
+  position: relative;
+  color: white;
+  border-radius: 10px;
 
 }
 .clubImage{
   max-width: 100%;
-  max-height: 100%;
+  max-height: 100;
   position: relative;
   outline-color: greenyellow;
-  grid-column: 3 / 9;
+  grid-column: 2 / 6;
   grid-row: 4;
   justify-self: stretch;
   animation: fade 6s;
+  border-radius: 10px;
+ 
 
 }
 .imageGrid{
@@ -88,10 +97,17 @@
   grid-template-columns: (1fr 1fr 1fr 1fr 1fr);
   grid-template-rows: 1fr;
   grid-row: 3;
-  grid-column: 8;
+  grid-column: 5;
 
 }
-
+.welcomeHeader{
+  display: grid;
+  justify-items: center ;
+}
+.welcomeDescription{
+  display: grid;
+  justify-items: center;
+}
 @media screen and (max-width: 667px) {
   .containerBtn{
     position: fixed;

@@ -7,6 +7,9 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
   return (
     <div className={styles.homePage}>
+          <div className={styles.mainHomePage}>
+      <h1>Welcome to Snake Eyes</h1>
+    </div>
     <div className={styles.enterPortalOverlay}>
     <div className={styles.container}>
       <Head>
@@ -69,14 +72,14 @@ export default function Home() {
           <button className={styles.btn}>Enter</button>
         </a>
         <div className={styles.enterText}>
-          <h1>
-            Press the sign to enter
+          <h1 className={styles.welcomeHeader}>
+            WELCOME TO SNAKE EYES
           </h1>
+          <p className={styles.welcomeDescription}>
+            Click the sign to enter our jungle
+          </p>
         </div>
     </div>
-    </div>
-    <div className={styles.mainHomePage}>
-    
     </div>
     </div>
   );
