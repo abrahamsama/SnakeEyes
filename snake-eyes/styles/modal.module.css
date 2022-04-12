@@ -1,0 +1,65 @@
+.modal{
+  background: white;
+  width: 500px;
+  height: 600px;
+  border-radius: 30px;
+  padding: 15px;
+  background-color: gray;
+
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    font-size: 100%;
+    font-family: LG;
+}
+.SEheader{
+    grid-row: 1;
+    grid-column: 3/4;
+    max-width: 100px;
+}
+.closeModal{
+    grid-row: 1;
+    grid-column: 5;
+    justify-self: end;
+}
+.body{
+    padding-top: 20%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    font-family: LG;
+    border-radius: 30px;
+    color: white;
+    background-color: black;
+}
+.overlay{
+    position: relative;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    transform: translateX(-100%);
+    top: 100px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); 
+    animation: modalSlideIn 2s forwards;
+    z-index: 2;
+    border-radius: 20px;
+}
+@keyframes modalSlideIn {
+    100% {transform: translateX(0%);}
+    
+}
+@keyframes modalFadeIn {
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+    
+}
