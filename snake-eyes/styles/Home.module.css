@@ -16,6 +16,7 @@
   z-index: 1;
   outline: auto
 }
+
 /*
 .container div:first-child{
   border-top-left-radius: 5px;
@@ -78,6 +79,9 @@
   grid-template-columns: auto minmax(0, 1fr);
   grid-template-rows: .2fr .5fr;
   padding-right: 5%;
+}
+.keen-slider__slide{
+  min-width: 500px;
 }
 .aboutText{
   grid-row: 2;
@@ -229,13 +233,34 @@
 }
 
 .snake1{
-  width: 150%;
+  width: 100%;
   grid-row: 4;
   grid-column: 1/5;
   position: relative;
   align-self: center;
   padding-left: 10%;
   padding-right: 10%;
+  border-radius: 20px;
+}
+.snake2{
+  width: 100%;
+  grid-row: 4;
+  grid-column: 1/5;
+  position: relative;
+  align-self: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 20px;
+}
+.snake3{
+  width: 100%;
+  grid-row: 4;
+  grid-column: 1/5;
+  position: relative;
+  align-self: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-radius: 20px;
 }
 .clubImage {
   max-width: 100%;
