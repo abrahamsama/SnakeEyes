@@ -15,6 +15,7 @@ export default function Modal({ show, onClose, children}) {
         };
       
         const modalContent = show ? (
+            <div className={styles.fullPageWrapper}>
             <div className={styles.overlay}>
                 <div className={styles.modal}>
                     <div className={styles.header}>
@@ -28,7 +29,7 @@ export default function Modal({ show, onClose, children}) {
                     <div className={styles.body}>{children}</div>
                 </div>
             </div>
-         
+            </div>
         ): null;
         if(isBrowser){
             return ReactDOM.createPortal(

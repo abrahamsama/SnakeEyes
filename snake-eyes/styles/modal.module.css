@@ -5,8 +5,11 @@
   border-radius: 30px;
   padding: 15px;
   background-color: gray;
-
+  background-image: url("/jungle_frameV.jpeg");
+  background-size: 175%;
+  background-position: center;
 }
+
 .header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -32,15 +35,17 @@
     border-radius: 30px;
     color: white;
     background-color: black;
+    background-size: cover;
+    background-image: url("/adrien-olichon-_GH9LwhlSO4-unsplash.jpg");
 }
 .overlay{
-    position: relative;
+    position: fixed;
     padding-top: 10%;
     padding-left: 10%;
     padding-right: 10%;
     transform: translateX(-100%);
-    top: 100px;
     left: 0;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;

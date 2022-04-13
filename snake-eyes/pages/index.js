@@ -15,23 +15,27 @@ export default function Home() {
   return (
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
-        <h1 className={styles.abHeader}>ABOUT</h1>
-        <p className={styles.aboutText}>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, 
-          feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies 
-          mi vitae est. Mauris placerat eleifend leo</p>
-        <div className={styles.nav}>
-          <a className={styles.navBarIconWrapper} onClick={() => setShowModal(true)}>
-          <img className={styles.navBarIcon}
+        <div className={styles.homePageheader}>
+          <div className={styles.banner}>
+            
+          </div>
+          <a className={styles.navGrid} onClick={() => setShowModal(true)}>
+          <img className={styles.navIcon}
             src="/navIcon.png"
             
           >
           </img>
           </a>
+          <div className={styles.headerLogoGrid}>
+            <img className={styles.headerLogo}
+            src="/finallogoWithSE.png"></img>
+          </div>
           <Modal show={showModal}
           onClose={() => setShowModal(false)}>
             <h1 className={styles.modalItem1}>About us</h1>
             <h1 className={styles.modalItem2}>FAQ</h1>
             <h1 className={styles.modalItem3}>Buy</h1>
+            <h1 className={styles.modalItem4}>Road Map</h1>
             <div className={styles.modalIcons}>
               <div className={styles.modalIcon1}>
                 <a href="https://discord.gg/uCkHGmGaC7" target={"_blank"}>
@@ -74,17 +78,21 @@ export default function Home() {
               </div>
           </Modal>
         </div>
-        <img className={styles.homePageBanner} 
-        src="/twitter_banner.png"
-
-        ></img>
-        <img className={styles.homePageLogo}
-        src = "/finalLogoWithSE.png"
-        ></img>
-        <img className={styles.snake1}
-      src="/snake1.jpg"
-      alt="snake1.jpg"
-      ></img>
+        <div className={styles.aboutUs}>
+          <div className={styles.aboutHeader}>
+          <h1 >About Us</h1>
+          </div>
+          <div className={styles.aboutText}>
+          <p >Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          </div>
+        </div>
+        <div>
+          carosul
+        </div>
+        <div>
+          roadmap
+        </div>
+   
       </div>
       
       <div className={styles.enterPortalOverlay} id={"modal"}>
