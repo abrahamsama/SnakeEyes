@@ -4,10 +4,10 @@
   height: 600px;
   border-radius: 30px;
   padding: 15px;
-  background-color: gray;
   background-image: url("/jungle_frameV.jpeg");
   background-size: 175%;
   background-position: center;
+
 }
 
 .header{

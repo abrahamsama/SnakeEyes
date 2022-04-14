@@ -32,15 +32,28 @@
   color: white;
   background-color: black;
   display: grid;
-  grid-auto-rows: 1fr;
+  grid-template-rows: minmax(100px, 1fr);
   max-width: 100%;
-  height: 100%;
+  max-height: 100%;
+}
+.carousel{
+  display: grid;
+  max-width: 100%;
+  max-height: 100%;
 }
 .homePageheader{
   display: grid;
   grid-template-rows: 1.2fr .5fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   
+}
+.roadMapContainer{
+  display: grid;
+}
+.roadmap{
+  width: 100%;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 .banner{
   background-image: url("/twitter_banner.png");
@@ -49,6 +62,7 @@
   position: relative;
   grid-row: 1;
   z-index: 0;
+  display: grid;
 }
 .headerLogoGrid{
   display: grid;
@@ -64,6 +78,7 @@
   justify-self: center;
   grid-row: 1/2;
   align-self: start;
+  display: grid
 }
 .navGrid{
   display: grid;
@@ -80,8 +95,8 @@
   grid-template-rows: .2fr .5fr;
   padding-right: 5%;
 }
+
 .keen-slider__slide{
-  min-width: 500px;
 }
 .aboutText{
   grid-row: 2;

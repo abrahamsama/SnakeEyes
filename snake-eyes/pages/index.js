@@ -10,6 +10,13 @@ import React from 'react'
 import { Ref } from "react";
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
+import { DOMElement } from "react";
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 
 
@@ -56,7 +63,6 @@ export default function Home() {
     ]
   )
     
-    
 
   
 const [showModal, setShowModal] = useState(false);
@@ -71,6 +77,7 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
   }
 )
   return (
+    
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
         <div className={styles.homePageheader}>
@@ -144,9 +151,9 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
           <p >Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
           </div>
         </div>
+        <div className={styles.carousel}>
         <div ref={sliderRef} className="keen-slider"
-        style={{width:'100%', height: '200%',
-        }}>
+       >
           <div className="keen-slider__slide">
             <img className={styles.snake1}
             src="/snake1.jpg"></img>
@@ -161,10 +168,24 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
             src="/snake3.png"
             ></img>
           </div>
-          carosul
+          <div className="keen-slider__slide">
+            <img className={styles.snake3}
+            src="/snake4.png"
+            ></img>
+          </div>
+        </div>
         </div>
         <div>
+          meet the team
+        </div>
+        <div className={styles.roadMapContainer}>
           roadmap
+          <img className={styles.roadmap}
+          src="/roadmap.jpg"
+          ></img>
+        </div>
+        <div>
+          test
         </div>
    
       </div>
