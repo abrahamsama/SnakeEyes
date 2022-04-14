@@ -12,7 +12,11 @@ import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
 import { DOMElement } from "react";
 import Cards from '../components/Cards'
+import ReactPlayer from 'react-player';
+
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
+
+import "../node_modules/video-react/dist/video-react.css";
 
 
 function clickHandler() {
@@ -20,7 +24,9 @@ function clickHandler() {
 }
 
 const animation = {duration: 10000, easing: (t) => t}
+
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(true);
   const[small, setSmall] =useState(false)
   const [sliderRef] = useKeenSlider ({
       loop:true,
@@ -72,7 +78,6 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
   }
 )
   return (
-    
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
         <div className={styles.homePageheader}>
@@ -179,6 +184,9 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
         <Cards imageSource={"/snake1.jpg"} name="Klat">
 
         </Cards>
+        <Cards imageSource={"/snake1.jpg"} name="Klat">
+
+        </Cards>
         
         </div>
         <div className={styles.roadMapContainer}>
@@ -272,7 +280,19 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
                 Click the sign to enter our club
               </p>
             </div>
+            <div className={styles.animatedModal} >
+          <ReactPlayer url="/slowedDownOutsideClub.mp4"
+          playing={isPlaying}
+          loop={true} 
+           height={"100%"}
+           width={"100%"}/>
           </div>
+          </div>
+       
+        </div>
+        <div>
+       <div>
+       </div>
         </div>
       </div>
     </div>

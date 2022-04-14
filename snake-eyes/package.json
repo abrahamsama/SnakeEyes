@@ -15,9 +15,12 @@
     "jquery": "^3.6.0",
     "keen-slider": "^6.6.7",
     "next": "10.0.4",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-owl-carousel": "^2.3.3",
-    "styled-components": "^5.3.5"
+    "react-player": "^2.10.0",
+    "redux": "^4.1.2",
+    "styled-components": "^5.3.5",
+    "video-react": "^0.15.0"
   }
 }
