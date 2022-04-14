@@ -11,7 +11,6 @@ export default function Home() {
         <title>Snake Eyes Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<<<<<<< HEAD
       <img
         className={styles.clubImage}
         alt="Background"
@@ -75,17 +74,4 @@ export default function Home() {
 
     </div>
   );
-=======
-    <div className={styles.bgWrap}>
-      <Image
-        alt="Background"
-        src="/homepage.png"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
-    </div>
-  </div>
-  )
->>>>>>> parent of d792025 (Merge pull request #1 from abrahamsama/abe)
 }
