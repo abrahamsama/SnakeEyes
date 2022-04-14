@@ -4,7 +4,43 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: .05fr .05fr 0.05fr 1fr .01fr .5fr 1fr;
-
+}
+/*
+.container div:first-child{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.container div:last-child{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}*/
+.mainHomePage {
+  position: absolute;
+  filter: blur(3px);
+  color: white;
+  background-color: black;
+  display: grid;
+  grid-template-rows: minmax(100px, 1fr);
+  max-width: 100%;
+  max-height: 100%;
+}
+.meetTheTeamContainer{
+  display: grid;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  grid-gap: 2%;
+}
+.carousel{
+  display: grid;
+  max-width: 100%;
+  max-height: 100%;
+}
+.homePageheader{
+  display: grid;
+  grid-template-rows: 1.2fr .5fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   
 }
 
