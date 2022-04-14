@@ -17,6 +17,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { maxHeight } from "@mui/system";
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 
 
@@ -175,8 +176,49 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
           </div>
         </div>
         </div>
-        <div>
-          meet the team
+        <div className={styles.meetTheTeamContainer}>
+        meet the team
+        <div className={styles.card1}>
+        <Card sx={{maxWidth: 300, height: 300}}>
+          <CardMedia
+            component="img"
+            height="300"
+            image="/snake1.jpg"
+            alt="green iguana"
+          />
+        </Card>
+        </div>
+        <div className={styles.card1}>
+        <Card sx={{maxWidth: 300, height: 300}}>
+          <CardMedia
+            component="img"
+            height="300"
+            image="/snake1.jpg"
+            alt="green iguana"
+          />
+        </Card>
+        </div>
+        <div className={styles.card1}>
+        <Card sx={{maxWidth: 300, height: 300}}>
+          <CardMedia
+            component="img"
+            height="300"
+            image="/snake1.jpg"
+            alt="green iguana"
+          />
+        </Card>
+        </div>
+        <div className={styles.card1}>
+        <Card sx={{maxWidth: 300, height: 300}}>
+          <CardMedia
+            component="img"
+            height="300"
+            image="/snake1.jpg"
+            alt="green iguana"
+          />
+        </Card>
+        </div>
+        
         </div>
         <div className={styles.roadMapContainer}>
           roadmap
