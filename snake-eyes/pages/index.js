@@ -280,10 +280,11 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
                 Click the sign to enter our club
               </p>
             </div>
-            <div className={styles.animatedModal} >
+            <div className={styles.animatedModal}>
           <ReactPlayer url="/slowedDownOutsideClub.mp4"
-          playing={isPlaying}
-          loop={true} 
+           muted={true}  
+           playing={isPlaying}
+           loop={true}
            height={"100%"}
            width={"100%"}/>
           </div>
