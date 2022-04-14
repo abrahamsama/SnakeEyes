@@ -11,13 +11,7 @@ import { Ref } from "react";
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
 import { DOMElement } from "react";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { maxHeight } from "@mui/system";
+import Cards from '../components/Cards'
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 
 
@@ -176,48 +170,15 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
           </div>
         </div>
         </div>
+        <div>
+          <h1>
+            Meet the team
+          </h1>
+        </div>
         <div className={styles.meetTheTeamContainer}>
-        meet the team
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
-        </div>
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
-        </div>
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
-        </div>
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
-        </div>
+        <Cards imageSource={"/snake1.jpg"} name="Klat">
+
+        </Cards>
         
         </div>
         <div className={styles.roadMapContainer}>
