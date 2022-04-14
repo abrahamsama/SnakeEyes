@@ -238,7 +238,7 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
             <title>Snake Eyes Home</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <div className={styles.test}>
+          <div className={styles.enterModal}>
             <img
               className={styles.clubImage}
               id={"test"}
