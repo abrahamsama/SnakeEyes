@@ -2,101 +2,90 @@ import Head from "next/head";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
-import 'keen-slider/keen-slider.min.css'
-import KeenSlider from 'keen-slider'
+import "keen-slider/keen-slider.min.css";
+import KeenSlider from "keen-slider";
 import styles from "../styles/Home.module.css";
 import Modal from "../components/Modal";
-import React from 'react'
+import React from "react";
 import { Ref } from "react";
-import 'keen-slider/keen-slider.min.css'
-import {useKeenSlider} from 'keen-slider/react'
+import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
 import { DOMElement } from "react";
-import Cards from '../components/Cards'
-import ReactPlayer from 'react-player';
+import Cards from "../components/Cards";
+import ReactPlayer from "react-player";
 
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 
 import "../node_modules/video-react/dist/video-react.css";
 
-
 function clickHandler() {
   console.log("Clicked");
 }
 
-const animation = {duration: 10000, easing: (t) => t}
+const animation = { duration: 10000, easing: (t) => t };
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(true);
-  const[small, setSmall] =useState(false)
-  const [sliderRef] = useKeenSlider ({
-      loop:true,
-      
+  const [small, setSmall] = useState(false);
+  const [sliderRef] = useKeenSlider(
+    {
+      loop: true,
     },
     [
       (slider) => {
-        let timeout
-        let mouseOver = false
+        let timeout;
+        let mouseOver = false;
         function clearNextTimeout() {
-          clearTimeout(timeout)
+          clearTimeout(timeout);
         }
         function nextTimeout() {
-          clearTimeout(timeout)
-          if (mouseOver) return
+          clearTimeout(timeout);
+          if (mouseOver) return;
           timeout = setTimeout(() => {
-            slider.next()
-          }, 2000)
+            slider.next();
+          }, 2000);
         }
         slider.on("created", () => {
           slider.container.addEventListener("mouseover", () => {
-            mouseOver = true
-            clearNextTimeout()
-          })
+            mouseOver = true;
+            clearNextTimeout();
+          });
           slider.container.addEventListener("mouseout", () => {
-            mouseOver = false
-            nextTimeout()
-          })
-          nextTimeout()
-        })
-        slider.on("dragStarted", clearNextTimeout)
-        slider.on("animationEnded", nextTimeout)
-        slider.on("updated", nextTimeout)
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
       },
     ]
-  )
-    
+  );
 
-  
-const [showModal, setShowModal] = useState(false);
-const [refCallback, slider, sliderNode] = useKeenSlider(
-  {
-    slideChanged(){
-      console.log('slide changed')
+  const [showModal, setShowModal] = useState(false);
+  const [refCallback, slider, sliderNode] = useKeenSlider(
+    {
+      slideChanged() {
+        console.log("slide changed");
+      },
     },
-  },
-  {
-    //add plugins here
-  }
-)
+    {
+      //add plugins here
+    }
+  );
   return (
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
         <div className={styles.homePageheader}>
-          <div className={styles.banner}>
-            
-          </div>
+          <div className={styles.banner}></div>
           <a className={styles.navGrid} onClick={() => setShowModal(true)}>
-          <img className={styles.navIcon}
-            src="/navIcon.png"
-            
-          >
-          </img>
+            <img className={styles.navIcon} src="/navIcon.png"></img>
           </a>
           <div className={styles.headerLogoGrid}>
-            <img className={styles.headerLogo}
-            src="/finallogoWithSE.png"></img>
+            <img className={styles.headerLogo} src="/finallogoWithSE.png"></img>
           </div>
-          <Modal show={showModal}
-          onClose={() => setShowModal(false)}>
+          <Modal show={showModal} onClose={() => setShowModal(false)}>
             <h1 className={styles.modalItem1}>About us</h1>
             <h1 className={styles.modalItem2}>FAQ</h1>
             <h1 className={styles.modalItem3}>Buy</h1>
@@ -107,7 +96,6 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
                   <svg
                     className={styles.icon1}
                     xmlns="http://www.w3.org/2000/svg"
-
                     fill="white"
                     class="bi bi-instagram"
                     viewBox="0 0 16 16"
@@ -120,7 +108,6 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
                 <a href="" target={"_blank"}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-
                     fill="white"
                     class="bi bi-twitter"
                     viewBox="0 0 16 16"
@@ -132,7 +119,6 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
               <div className={styles.modalIcon3}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-
                   fill="white"
                   class="bi bi-discord"
                   viewBox="0 0 16 16"
@@ -140,70 +126,57 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
                   <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z" />
                 </svg>
               </div>
-              </div>
+            </div>
           </Modal>
         </div>
         <div className={styles.aboutUs}>
           <div className={styles.aboutHeader}>
-          <h1 >About Us</h1>
+            <h1>About Us</h1>
           </div>
           <div className={styles.aboutText}>
-          <p >Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            <p>
+              Pellentesque habitant morbi tristique senectus et netus et
+              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
+              vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+              amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
+              placerat eleifend leo.
+            </p>
           </div>
         </div>
         <div className={styles.carousel}>
-        <div ref={sliderRef} className="keen-slider"
-       >
-          <div className="keen-slider__slide">
-            <img className={styles.snake1}
-            src="/snake1.jpg"></img>
+          <div ref={sliderRef} className="keen-slider">
+            <div className="keen-slider__slide">
+              <img className={styles.snake1} src="/snake1.jpg"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake2} src="/snake2.png"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake3} src="/snake3.png"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake3} src="/snake4.png"></img>
+            </div>
           </div>
-          <div className="keen-slider__slide">
-            <img className={styles.snake2}
-            src="/snake2.png"
-            ></img>
-          </div>
-          <div className="keen-slider__slide">
-            <img className={styles.snake3}
-            src="/snake3.png"
-            ></img>
-          </div>
-          <div className="keen-slider__slide">
-            <img className={styles.snake3}
-            src="/snake4.png"
-            ></img>
-          </div>
-        </div>
         </div>
         <div>
-          <h1>
-            Meet the team
-          </h1>
+          <h1>Meet the team</h1>
         </div>
         <div className={styles.meetTheTeamContainer}>
-        <div className={styles.cards}>
-        <Cards imageSource={"/snake1.jpg"} name="Klat">
-
-        </Cards>
-        </div>
-        <div className={styles.cards}>
-        <Cards imageSource={"/snake1.jpg"} name="Klat">
-
-        </Cards>
-        </div>
+          <div className={styles.cards}>
+            <Cards imageSource={"/snake1.jpg"} name="Klat"></Cards>
+          </div>
+          <div className={styles.cards}>
+            <Cards imageSource={"/snake1.jpg"} name="Klat"></Cards>
+          </div>
         </div>
         <div className={styles.roadMapContainer}>
           roadmap
-          <img className={styles.roadmap}
-          src="/roadmap.jpg"
-          ></img>
+          <img className={styles.roadmap} src="/roadmap.jpg"></img>
         </div>
-        <div>
-          test
-        </div>
-   
+        <div>test</div>
       </div>
-      
+
       <div className={styles.enterPortalOverlay} id={"modal"}>
         <div className={styles.container}>
           <Head>
@@ -284,22 +257,21 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
               </p>
             </div>
             <div className={styles.animatedModal}>
-          <ReactPlayer url="/slowedDownOutsideClub.mp4"
-           muted={true}  
-           playing={isPlaying}
-           loop={true}
-           height={"100%"}
-           width={"100%"}/>
+              <ReactPlayer
+                url="/slowedDownOutsideClub.mp4"
+                muted={true}
+                playing={isPlaying}
+                loop={true}
+                height={"100%"}
+                width={"100%"}
+              />
+            </div>
           </div>
-          </div>
-       
         </div>
         <div>
-       <div>
-       </div>
+          <div></div>
         </div>
       </div>
     </div>
   );
 }
-
