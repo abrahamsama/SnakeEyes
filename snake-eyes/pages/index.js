@@ -181,13 +181,16 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
           </h1>
         </div>
         <div className={styles.meetTheTeamContainer}>
+        <div className={styles.cards}>
         <Cards imageSource={"/snake1.jpg"} name="Klat">
 
         </Cards>
+        </div>
+        <div className={styles.cards}>
         <Cards imageSource={"/snake1.jpg"} name="Klat">
 
         </Cards>
-        
+        </div>
         </div>
         <div className={styles.roadMapContainer}>
           roadmap

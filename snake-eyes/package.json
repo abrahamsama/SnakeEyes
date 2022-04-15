@@ -22,5 +22,8 @@
     "redux": "^4.1.2",
     "styled-components": "^5.3.5",
     "video-react": "^0.15.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2"
   }
 }
