@@ -1,19 +1,18 @@
-.container{
-    font-family: LG;
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    background: white;
-    color: black;
-/*    grid-column-gap:1em;
+.container {
+  font-family: LG;
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  background: white;
+  color: black;
+  /*    grid-column-gap:1em;
     grid-row-gap: 1em;*/
-    grid-gap:1em;
+  grid-gap: 1em;
 }
-.container > div{
-    background-color: black;
-    color: white;
-    padding: 1em;
-    
+.container > div {
+  background-color: black;
+  color: white;
+  padding: 1em;
 }
-.container > div:nth-child(odd){
-    background-color: rgb(14, 7, 7);
+.container > div:nth-child(odd) {
+  background-color: rgb(14, 7, 7);
 }

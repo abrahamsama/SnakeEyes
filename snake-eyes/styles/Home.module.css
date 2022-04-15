@@ -1,4 +1,3 @@
-
 .container {
   display: inline-grid;
   grid-template-columns: 1fr;
@@ -17,14 +16,11 @@
   outline: auto;
   position: relative;
 }
-.animatedModal{
+.animatedModal {
   display: grid;
   grid-row: 4;
   position: absolute;
-  
-
 }
-
 
 /*
 .container div:first-child{
@@ -45,39 +41,43 @@
   max-width: 100%;
   max-height: 100%;
 }
-.meetTheTeamContainer{
+.meetTheTeamContainer {
   display: grid;
   background-color: black;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 20px;
   grid-gap: 40px;
+  justify-content: center;
 }
 .cards {
+  display: grid;
   border-radius: 20px;
-  position: relative;
+  justify-content: center;
 }
-.carousel{
+.card {
+  position: relative;
+  margin: 0 auto;
+}
+.carousel {
   display: grid;
   max-width: 100%;
   max-height: 100%;
 }
-.homePageheader{
+.homePageheader {
   display: grid;
-  grid-template-rows: 1.2fr .5fr;
+  grid-template-rows: 1.2fr 0.5fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  
 }
-.roadMapContainer{
+.roadMapContainer {
   display: grid;
   background-color: black;
 }
-.roadmap{
+.roadmap {
   width: 100%;
   padding-right: 10%;
   padding-left: 10%;
 }
-.banner{
+.banner {
   background-image: url("/twitter_banner.png");
   background-size: cover;
   grid-column: 1/5;
@@ -87,7 +87,7 @@
   display: grid;
 }
 
-.headerLogoGrid{
+.headerLogoGrid {
   display: grid;
   grid-row: 1;
   grid-column: 1/3;
@@ -95,15 +95,15 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
 }
-.headerLogo{
+.headerLogo {
   width: 50%;
   position: absolute;
   justify-self: center;
   grid-row: 1/2;
   align-self: start;
-  display: grid
+  display: grid;
 }
-.navGrid{
+.navGrid {
   display: grid;
   grid-column: 4;
   grid-row: 1;
@@ -111,99 +111,89 @@
   position: relative;
   grid-template-rows: fit-content(1fr 1fr 1fr);
 }
-.aboutUs{
+.aboutUs {
   display: grid;
   padding-left: 5%;
   grid-template-columns: auto minmax(0, 1fr);
-  grid-template-rows: .2fr .5fr;
+  grid-template-rows: 0.2fr 0.5fr;
   padding-right: 5%;
 }
-
-
-.keen-slider__slide{
-}
-.aboutText{
+.aboutText {
   grid-row: 2;
 }
-.aboutHeader{
+.aboutHeader {
   grid-row: 1;
 }
-.abHeader{
+.abHeader {
   position: absolute;
   grid-row: 2;
 }
-.navIcon{
+.navIcon {
   width: 30%;
   grid-row: 2;
 }
-.nav{
- display: grid;
- grid-column: 1;
- grid-template-columns: 1fr 1fr 1fr ;
- grid-template-rows: 1fr 1fr 1fr;
- grid-row: 1;
- z-index: 1;
- 
-
+.nav {
+  display: grid;
+  grid-column: 1;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row: 1;
+  z-index: 1;
 }
-.abHeader{
+.abHeader {
   grid-row: 2;
-
 }
-.homePageBanner{
+.homePageBanner {
   grid-row: 1;
   max-width: 100%;
   grid-column: 1;
   position: relative;
   max-height: 150%;
 }
-.homePageLogo{
+.homePageLogo {
   max-width: 76%;
   padding-left: 10px;
   grid-row: 1;
   z-index: 1;
   grid-column: 1;
 }
-.navBarIconWrapper{
+.navBarIconWrapper {
   display: grid;
   grid-row: 2;
   grid-column: 2;
-  
 }
-.navBarIcon{
+.navBarIcon {
   width: 100%;
   grid-row: 3;
-
 }
-.modalIcons{
+.modalIcons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-row: 5;
   justify-items: center;
-  
 }
-.modalItem1{
+.modalItem1 {
   justify-self: center;
 }
-.modalItem2{
+.modalItem2 {
   justify-self: center;
 }
-.modalItem3{
+.modalItem3 {
   justify-self: center;
 }
-.modalItem4{
+.modalItem4 {
   justify-self: center;
 }
-.modalIcon1{
+.modalIcon1 {
   grid-row: 2;
   width: 30%;
 }
-.modalIcon2{
+.modalIcon2 {
   grid-row: 2;
   width: 30%;
 }
-.modalIcon3{
+.modalIcon3 {
   grid-row: 2;
   grid-column: 2;
   width: 30%;
@@ -271,7 +261,7 @@
   border-radius: 20px;
 }
 
-.snake1{
+.snake1 {
   width: 100%;
   grid-row: 4;
   grid-column: 1/5;
@@ -281,7 +271,7 @@
   padding-right: 10%;
   border-radius: 20px;
 }
-.snake2{
+.snake2 {
   width: 100%;
   grid-row: 4;
   grid-column: 1/5;
@@ -291,7 +281,7 @@
   padding-right: 10%;
   border-radius: 20px;
 }
-.snake3{
+.snake3 {
   width: 100%;
   grid-row: 4;
   grid-column: 1/5;
@@ -341,14 +331,14 @@
     max-width: 60%;
     padding-top: 10px;
   }
-  .icon1{
+  .icon1 {
     grid-column: 3;
   }
-  .icon2{
+  .icon2 {
     grid-column: 4;
     justify-self: center;
   }
-  .icon3{
+  .icon3 {
     justify-self: start;
   }
 }

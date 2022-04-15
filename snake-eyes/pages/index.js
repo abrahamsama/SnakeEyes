@@ -164,10 +164,19 @@ export default function Home() {
         </div>
         <div className={styles.meetTheTeamContainer}>
           <div className={styles.cards}>
-            <Cards imageSource={"/snake1.jpg"} name="Klat"></Cards>
+            <div className={styles.card}>
+              <Cards imageSource={"/snake1.jpg"} name="Card 1"></Cards>
+            </div>
           </div>
           <div className={styles.cards}>
-            <Cards imageSource={"/snake1.jpg"} name="Klat"></Cards>
+            <div className={styles.card}>
+              <Cards imageSource={"/snake1.jpg"} name="Card 2"></Cards>
+            </div>
+          </div>
+          <div className={styles.cards}>
+            <div className={styles.card}>
+              <Cards imageSource={"/snake1.jpg"} name="Card 3"></Cards>
+            </div>
           </div>
         </div>
         <div className={styles.roadMapContainer}>

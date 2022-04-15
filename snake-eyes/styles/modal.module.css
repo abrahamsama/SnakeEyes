@@ -1,4 +1,4 @@
-.modal{
+.modal {
   background: white;
   width: 500px;
   height: 600px;
@@ -7,64 +7,63 @@
   background-image: url("/jungle_frameV.jpeg");
   background-size: 175%;
   background-position: center;
-
 }
 
-.header{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    font-size: 100%;
-    font-family: LG;
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-size: 100%;
+  font-family: LG;
 }
-.SEheader{
-    grid-row: 1;
-    grid-column: 3/4;
-    max-width: 100px;
+.SEheader {
+  grid-row: 1;
+  grid-column: 3/4;
+  max-width: 100px;
 }
-.closeModal{
-    grid-row: 1;
-    grid-column: 5;
-    justify-self: end;
+.closeModal {
+  grid-row: 1;
+  grid-column: 5;
+  justify-self: end;
 }
-.body{
-    padding-top: 20%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    font-family: LG;
-    border-radius: 30px;
-    color: white;
-    background-color: black;
-    background-size: cover;
-    background-image: url("/adrien-olichon-_GH9LwhlSO4-unsplash.jpg");
+.body {
+  padding-top: 20%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  font-family: LG;
+  border-radius: 30px;
+  color: white;
+  background-color: black;
+  background-size: cover;
+  background-image: url("/adrien-olichon-_GH9LwhlSO4-unsplash.jpg");
 }
-.overlay{
-    position: fixed;
-    padding-top: 10%;
-    padding-left: 10%;
-    padding-right: 10%;
-    transform: translateX(-100%);
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5); 
-    animation: modalSlideIn 2s forwards;
-    z-index: 2;
-    border-radius: 20px;
+.overlay {
+  position: fixed;
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  transform: translateX(-100%);
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: modalSlideIn 2s forwards;
+  z-index: 2;
+  border-radius: 20px;
 }
 @keyframes modalSlideIn {
-    100% {transform: translateX(0%);}
-    
+  100% {
+    transform: translateX(0%);
+  }
 }
 @keyframes modalFadeIn {
-    from{
-        opacity: 0%;
-    }
-    to{
-        opacity: 100%;
-    }
-    
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
