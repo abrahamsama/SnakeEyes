@@ -178,45 +178,45 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
         </div>
         <div className={styles.meetTheTeamContainer}>
         meet the team
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
+        <div className={styles.cards}>
+          <Card sx={{maxWidth: 300, height: 300}}>
+            <CardMedia
+              component="img"
+              height="300"
+              image="/snake1.jpg"
+              alt="green iguana"
+            />
+          </Card>
         </div>
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
+        <div className={styles.cards}>
+          <Card sx={{maxWidth: 300, height: 300}}>
+            <CardMedia
+              component="img"
+              height="300"
+              image="/snake1.jpg"
+              alt="green iguana"
+            />
+          </Card>
         </div>
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
+        <div className={styles.cards}>
+          <Card sx={{maxWidth: 300, height: 300}}>
+            <CardMedia
+              component="img"
+              height="300"
+              image="/snake1.jpg"
+              alt="green iguana"
+            />
+          </Card>
         </div>
-        <div className={styles.card1}>
-        <Card sx={{maxWidth: 300, height: 300}}>
-          <CardMedia
-            component="img"
-            height="300"
-            image="/snake1.jpg"
-            alt="green iguana"
-          />
-        </Card>
+        <div className={styles.cards}>
+          <Card sx={{maxWidth: 300, height: 300}}>
+            <CardMedia
+              component="img"
+              height="300"
+              image="/snake1.jpg"
+              alt="green iguana"
+            />
+          </Card>
         </div>
         
         </div>
