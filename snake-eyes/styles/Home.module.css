@@ -14,8 +14,17 @@
   grid-template-columns: 1fr 1fr 1fr;
   border-radius: 20px;
   z-index: 1;
-  outline: auto
+  outline: auto;
+  position: relative;
 }
+.animatedModal{
+  display: grid;
+  grid-row: 4;
+  position: absolute;
+  
+
+}
+
 
 /*
 .container div:first-child{
@@ -61,6 +70,7 @@
 }
 .roadMapContainer{
   display: grid;
+  background-color: black;
 }
 .roadmap{
   width: 100%;
@@ -76,6 +86,7 @@
   z-index: 0;
   display: grid;
 }
+
 .headerLogoGrid{
   display: grid;
   grid-row: 1;
@@ -107,6 +118,7 @@
   grid-template-rows: .2fr .5fr;
   padding-right: 5%;
 }
+
 
 .keen-slider__slide{
 }
@@ -299,6 +311,7 @@
   grid-row: 4;
   justify-self: stretch;
   animation: fadeIn 6s;
+  opacity: 0;
 }
 .imageGrid {
   display: grid;

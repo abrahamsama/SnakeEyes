@@ -11,14 +11,12 @@ import { Ref } from "react";
 import 'keen-slider/keen-slider.min.css'
 import {useKeenSlider} from 'keen-slider/react'
 import { DOMElement } from "react";
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import { maxHeight } from "@mui/system";
+import Cards from '../components/Cards'
+import ReactPlayer from 'react-player';
+
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
+
+import "../node_modules/video-react/dist/video-react.css";
 
 
 function clickHandler() {
@@ -26,7 +24,9 @@ function clickHandler() {
 }
 
 const animation = {duration: 10000, easing: (t) => t}
+
 export default function Home() {
+  const [isPlaying, setIsPlaying] = useState(true);
   const[small, setSmall] =useState(false)
   const [sliderRef] = useKeenSlider ({
       loop:true,
@@ -78,7 +78,6 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
   }
 )
   return (
-    
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
         <div className={styles.homePageheader}>
@@ -176,48 +175,18 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
           </div>
         </div>
         </div>
+        <div>
+          <h1>
+            Meet the team
+          </h1>
+        </div>
         <div className={styles.meetTheTeamContainer}>
-        meet the team
-        <div className={styles.cards}>
-          <Card sx={{maxWidth: 300, height: 300}}>
-            <CardMedia
-              component="img"
-              height="300"
-              image="/snake1.jpg"
-              alt="green iguana"
-            />
-          </Card>
-        </div>
-        <div className={styles.cards}>
-          <Card sx={{maxWidth: 300, height: 300}}>
-            <CardMedia
-              component="img"
-              height="300"
-              image="/snake1.jpg"
-              alt="green iguana"
-            />
-          </Card>
-        </div>
-        <div className={styles.cards}>
-          <Card sx={{maxWidth: 300, height: 300}}>
-            <CardMedia
-              component="img"
-              height="300"
-              image="/snake1.jpg"
-              alt="green iguana"
-            />
-          </Card>
-        </div>
-        <div className={styles.cards}>
-          <Card sx={{maxWidth: 300, height: 300}}>
-            <CardMedia
-              component="img"
-              height="300"
-              image="/snake1.jpg"
-              alt="green iguana"
-            />
-          </Card>
-        </div>
+        <Cards imageSource={"/snake1.jpg"} name="Klat">
+
+        </Cards>
+        <Cards imageSource={"/snake1.jpg"} name="Klat">
+
+        </Cards>
         
         </div>
         <div className={styles.roadMapContainer}>
@@ -311,7 +280,20 @@ const [refCallback, slider, sliderNode] = useKeenSlider(
                 Click the sign to enter our club
               </p>
             </div>
+            <div className={styles.animatedModal}>
+          <ReactPlayer url="/slowedDownOutsideClub.mp4"
+           muted={true}  
+           playing={isPlaying}
+           loop={true}
+           height={"100%"}
+           width={"100%"}/>
           </div>
+          </div>
+       
+        </div>
+        <div>
+       <div>
+       </div>
         </div>
       </div>
     </div>
