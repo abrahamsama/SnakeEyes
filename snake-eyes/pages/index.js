@@ -14,6 +14,7 @@ import { DOMElement } from "react";
 import Cards from "../components/Cards";
 import ReactPlayer from "react-player";
 
+
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 
 import "../node_modules/video-react/dist/video-react.css";
@@ -64,6 +65,8 @@ export default function Home() {
   );
 
   const [showModal, setShowModal] = useState(false);
+  const[showInfo, setInfo] = useState(false);
+  var currentState = "notDisplaying";
   const [refCallback, slider, sliderNode] = useKeenSlider(
     {
       slideChanged() {
@@ -159,9 +162,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>
-          <h1>Meet the team</h1>
-        </div>
         <div className={styles.meetTheTeamContainer}>
           <div className={styles.cards}>
             <div className={styles.card}>
@@ -183,7 +183,25 @@ export default function Home() {
           roadmap
           <img className={styles.roadmap} src="/roadmap.jpg"></img>
         </div>
-        <div>test</div>
+        <div className={styles.FAQ}>
+          <h1 >FAQ</h1>
+          <div className={styles.accordionContainer}>
+            <h1 onClick={ () => {
+              var info = document.getElementById("info1");
+              if(currentState == "notDisplaying"){
+                
+                info.style.display = "block";
+                currentState = "displaying"
+              }
+              else{
+                info.style.display = "none";
+                currentState = "notDisplaying"
+            }
+          }
+            }>How can I mint</h1>
+            <p id="info1" className={styles.accordionInfo1}>You can mint by...</p>
+            </div>
+        </div>
       </div>
 
       <div className={styles.enterPortalOverlay} id={"modal"}>
