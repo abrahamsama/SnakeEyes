@@ -74,20 +74,23 @@ export default function Home() {
       },
     },
     {
-      //add plugins here
+      //add plugins hereF
     }
   );
   return (
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
         <div className={styles.homePageheader}>
-          <div className={styles.banner}></div>
+          <div className={styles.banner}>
+            <img className={styles.twitterBanner}
+            src="/twitter_banner.png"
+            ></img>
+          </div>
           <a className={styles.navGrid} onClick={() => setShowModal(true)}>
             <img className={styles.navIcon} src="/navIcon.png"></img>
           </a>
-          <div className={styles.headerLogoGrid}>
             <img className={styles.headerLogo} src="/finallogoWithSE.png"></img>
-          </div>
+        
           <Modal show={showModal} onClose={() => setShowModal(false)}>
             <h1 className={styles.modalItem1}>About us</h1>
             <h1 className={styles.modalItem2}>FAQ</h1>
@@ -132,21 +135,31 @@ export default function Home() {
             </div>
           </Modal>
         </div>
+        <div>
+          <h1>Stats</h1>
+        </div>
+        <div className={styles.insideOfClubHouse}>
+          <img className={styles.inside}
+          src="insideOfClubHouse.png"
+          ></img>
+        </div>
         <div className={styles.aboutUs}>
-          <div className={styles.aboutHeader}>
-            <h1>About Us</h1>
-          </div>
           <div className={styles.aboutText}>
+          <h1>About Us</h1>
             <p>
-              Pellentesque habitant morbi tristique senectus et netus et
-              malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat
-              vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
-              amet quam egestas semper. Aenean ultricies mi vitae est. Mauris
-              placerat eleifend leo.
+            There are millions of snakes in the world, but only 5,500 are 
+            slithering onto the Solana block chain.  Each boasting an array of different 
+            styles, eccentricity, colors, and attitudes. <br></br>
+            <br></br>  Born from a clutch of hundreds of hand drawn assets.  
+            Prepared to strike and seize their place in the crypto-verse.  Wrangling the art, our dedicated in 
+            house artist insures the highest quality snakes and variety. 
+            <br></br>
+            <br></br> Watch your step and be ready to add a
+             snake to your collection
             </p>
           </div>
-        </div>
-        <div className={styles.carousel}>
+          <div className={styles.abSnake}>
+          <div className={styles.carousel}>
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide">
               <img className={styles.snake1} src="/snake1.jpg"></img>
@@ -162,6 +175,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </div>
+        </div>
+        <h1>Meet the team</h1>
         <div className={styles.meetTheTeamContainer}>
           <div className={styles.cards}>
             <div className={styles.card}>
