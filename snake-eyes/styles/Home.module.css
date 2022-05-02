@@ -123,7 +123,14 @@
   max-height: 100%;
   object-fit: cover;
 }
+.header {
+  background-image: url(/twitter_banner.png);
+}
 .headerLogo {
+  width: 30%;
+  min-width: 160px;
+}
+/* .headerLogo {
   width: 30%;
   position: absolute;
   grid-column: 1;
@@ -131,7 +138,7 @@
   display: grid;
   padding-left: 5%;
 
-}
+} */
 .navGrid {
   display: grid;
   grid-column: 4;
