@@ -4,7 +4,7 @@ import styles from "../styles/modal.module.css";
 
 export default function Modal({ show, onClose, children }) {
   const [isBrowser, setIsBrowser] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     setIsBrowser(true);
   }, []);
@@ -24,8 +24,9 @@ export default function Modal({ show, onClose, children }) {
               className={styles.closeModal}
               href="#"
               onClick={handleCloseClick}
+              
             >
-              x
+              
             </a>
           </div>
           <div className={styles.body}>{children}</div>

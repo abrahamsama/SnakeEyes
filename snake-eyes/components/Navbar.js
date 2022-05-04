@@ -4,10 +4,13 @@ import { useState } from "react";
 import navstyles from "../styles/Layout.module.css";
 import homestyles from "../styles/Home.module.css";
 
+
+
 export default function Navbar({ children }) {
     const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
+  var currentState = "notDisplaying"
   return (
     <>
       <header className={homestyles.header}>
@@ -90,9 +93,25 @@ export default function Navbar({ children }) {
                 ? navstyles.hamburger
                 : navstyles.hamburger + " " + navstyles.active
             }
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              switch (currentState)
+              {
+                case "notDisplaying":
+                  setShowModal(true)
+                  currentState = "displaying"
+                  break;
+                case "displaying":
+                  setShowModal(false)
+                  currentState = "notDisplaying"
+                  break;
+                
+              }
+              currentState = "displaying"
+             
+            }
+          }
           >
-            <Modal show={showModal} onClose={() => setShowModal(false)}>
+            <Modal id="modal" show={showModal} onClose={() => setShowModal(false)}>
             <h1 className={homestyles.modalItem1}>About Us</h1>
             <h1 className={homestyles.modalItem2}>FAQ</h1>
             <h1 className={homestyles.modalItem3}>Buy</h1>
@@ -142,6 +161,7 @@ export default function Navbar({ children }) {
         </nav>
       </header>
       {children}
+
       {/* {footer} */}
     </>
   );

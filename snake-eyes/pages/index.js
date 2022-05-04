@@ -18,6 +18,7 @@ import ReactPlayer from "react-player";
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 
 import "../node_modules/video-react/dist/video-react.css";
+import Navbar from "../components/Navbar";
 
 function clickHandler() {
   console.log("Clicked");
@@ -140,7 +141,7 @@ export default function Home() {
         </div>
         <div className={styles.insideOfClubHouse}>
           <img className={styles.inside}
-          src="insideOfClubHouse.png"
+          src="2-rustic_bar.png"
           ></img>
         </div>
         <div className={styles.aboutUs}>
