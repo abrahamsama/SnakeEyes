@@ -14,6 +14,7 @@ import { DOMElement } from "react";
 import Cards from "../components/Cards";
 import ReactPlayer from "react-player";
 
+
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 
 import "../node_modules/video-react/dist/video-react.css";
@@ -64,7 +65,7 @@ export default function Home() {
   );
 
   const [showModal, setShowModal] = useState(false);
-  const [showInfo, setInfo] = useState(false);
+  const[showInfo, setInfo] = useState(false);
   var currentState = "notDisplaying";
   const [refCallback, slider, sliderNode] = useKeenSlider(
     {
@@ -80,6 +81,15 @@ export default function Home() {
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
         {/* <div className={styles.homePageheader}>
+          <div className={styles.banner}>
+            <img className={styles.twitterBanner}
+            src="/twitter_banner.png"
+            ></img>
+          </div>
+          <a className={styles.navGrid} onClick={() => setShowModal(true)}>
+            <img className={styles.navIcon} src="/navIcon.png"></img>
+          </a>
+            <img className={styles.headerLogo} src="/finallogoWithSE.png"></img>
         
           <Modal show={showModal} onClose={() => setShowModal(false)}>
             <h1 className={styles.modalItem1}>About us</h1>
@@ -129,42 +139,43 @@ export default function Home() {
           <h1>Stats</h1>
         </div>
         <div className={styles.insideOfClubHouse}>
-          <img className={styles.inside} src="insideOfClubHouse.png"></img>
+          <img className={styles.inside}
+          src="insideOfClubHouse.png"
+          ></img>
         </div>
         <div className={styles.aboutUs}>
           <div className={styles.aboutText}>
-            <h1>About Us</h1>
+          <h1>About Us</h1>
             <p>
-              There are millions of snakes in the world, but only 5,500 are
-              slithering onto the Solana block chain. Each boasting an array of
-              different styles, eccentricity, colors, and attitudes. <br></br>
-              <br></br> Born from a clutch of hundreds of hand drawn assets.
-              Prepared to strike and seize their place in the crypto-verse.
-              Wrangling the art, our dedicated in house artist insures the
-              highest quality snakes and variety.
-              <br></br>
-              <br></br> Watch your step and be ready to add a snake to your
-              collection
+            There are millions of snakes in the world, but only 5,500 are 
+            slithering onto the Solana block chain.  Each boasting an array of different 
+            styles, eccentricity, colors, and attitudes. <br></br>
+            <br></br>  Born from a clutch of hundreds of hand drawn assets.  
+            Prepared to strike and seize their place in the crypto-verse.  Wrangling the art, our dedicated in 
+            house artist insures the highest quality snakes and variety. 
+            <br></br>
+            <br></br> Watch your step and be ready to add a
+             snake to your collection
             </p>
           </div>
           <div className={styles.abSnake}>
-            <div className={styles.carousel}>
-              <div ref={sliderRef} className="keen-slider">
-                <div className="keen-slider__slide">
-                  <img className={styles.snake1} src="/snake1.jpg"></img>
-                </div>
-                <div className="keen-slider__slide">
-                  <img className={styles.snake2} src="/snake2.png"></img>
-                </div>
-                <div className="keen-slider__slide">
-                  <img className={styles.snake3} src="/snake3.png"></img>
-                </div>
-                <div className="keen-slider__slide">
-                  <img className={styles.snake3} src="/snake4.png"></img>
-                </div>
-              </div>
+          <div className={styles.carousel}>
+          <div ref={sliderRef} className="keen-slider">
+            <div className="keen-slider__slide">
+              <img className={styles.snake1} src="/snake1.jpg"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake2} src="/snake2.png"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake3} src="/snake3.png"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake3} src="/snake4.png"></img>
             </div>
           </div>
+        </div>
+        </div>
         </div>
         <h1>Meet the team</h1>
         <div className={styles.meetTheTeamContainer}>
@@ -189,26 +200,23 @@ export default function Home() {
           <img className={styles.roadmap} src="/roadmap.jpg"></img>
         </div>
         <div className={styles.FAQ}>
-          <h1>FAQ</h1>
+          <h1 >FAQ</h1>
           <div className={styles.accordionContainer}>
-            <h1
-              onClick={() => {
-                var info = document.getElementById("info1");
-                if (currentState == "notDisplaying") {
-                  info.style.display = "block";
-                  currentState = "displaying";
-                } else {
-                  info.style.display = "none";
-                  currentState = "notDisplaying";
-                }
-              }}
-            >
-              How can I mint
-            </h1>
-            <p id="info1" className={styles.accordionInfo1}>
-              You can mint by...
-            </p>
-          </div>
+            <h1 onClick={ () => {
+              var info = document.getElementById("info1");
+              if(currentState == "notDisplaying"){
+                
+                info.style.display = "block";
+                currentState = "displaying"
+              }
+              else{
+                info.style.display = "none";
+                currentState = "notDisplaying"
+            }
+          }
+            }>How can I mint</h1>
+            <p id="info1" className={styles.accordionInfo1}>You can mint by...</p>
+            </div>
         </div>
       </div>
 
