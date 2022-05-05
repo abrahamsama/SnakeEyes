@@ -13,13 +13,19 @@ import { useKeenSlider } from "keen-slider/react";
 import { DOMElement } from "react";
 import Cards from "../components/Cards";
 import ReactPlayer from "react-player";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 
 
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 import "../node_modules/video-react/dist/video-react.css";
 import Navbar from "../components/Navbar";
-
+<script>
+  AOS.init();
+</script>
 function clickHandler() {
   console.log("Clicked");
 }
@@ -79,6 +85,7 @@ export default function Home() {
     }
   );
   return (
+    <body>
     <div className={styles.homePage}>
       <div className={styles.mainHomePage} id="mainHomePage">
         <Navbar></Navbar>
@@ -147,7 +154,7 @@ export default function Home() {
         </div>
         <div className={styles.aboutUs}>
           <div className={styles.aboutText}>
-          <h1>About Us</h1>
+          <h1 >About Us</h1>
             <p>
             There are millions of snakes in the world, but only 5,500 are 
             slithering onto the Solana block chain.  Each boasting an array of different 
@@ -179,20 +186,20 @@ export default function Home() {
         </div>
         </div>
         </div>
-        <h1>Meet the team</h1>
-        <div className={styles.meetTheTeamContainer}>
+        <h1 data-aos="fade-in">Meet the team</h1>
+        <div  className={styles.meetTheTeamContainer}>
           <div className={styles.cards}>
-            <div className={styles.card}>
+            <div data-aos="fade-in" className={styles.card}>
               <Cards imageSource={"/snake1.jpg"} name="Card 1"></Cards>
             </div>
           </div>
           <div className={styles.cards}>
-            <div className={styles.card}>
+            <div data-aos="fade-in" className={styles.card}>
               <Cards imageSource={"/snake1.jpg"} name="Card 2"></Cards>
             </div>
           </div>
           <div className={styles.cards}>
-            <div className={styles.card}>
+            <div data-aos="fade-in"  className={styles.card}>
               <Cards imageSource={"/snake1.jpg"} name="Card 3"></Cards>
             </div>
           </div>
@@ -227,6 +234,7 @@ export default function Home() {
           <Head>
             <title>Snake Eyes Home</title>
             <link rel="icon" href="/favicon.ico" />
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
           </Head>
           <div className={styles.enterModal}>
             <img
@@ -315,5 +323,11 @@ export default function Home() {
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+    </body>
   );
 }
