@@ -37,7 +37,7 @@
   position: absolute;
   filter: blur(3px);
   color: white;
-  background-color: black;
+  background-color: #0c0d11;
   display: grid;
   grid-template-rows: minmax(100px, 1fr);
   grid-auto-columns: 1fr;
@@ -56,7 +56,6 @@
 }
 .meetTheTeamContainer {
   display: grid;
-  background-color: black;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 20px;
   grid-gap: 40px;
@@ -64,7 +63,6 @@
 }
 .insideOfClubHouse{
   display: grid;
-  background-color: black;
   background-size: 100%;
   
 
@@ -77,38 +75,31 @@
   display: grid;
   border-radius: 20px;
   justify-content: center;
-  background-color: black;
 }
 .card {
   position: relative;
   margin: 0 auto;
-  background-color: black;
 }
 .carousel {
   display: grid;
   max-width: 100%;
   max-height: 100%;
-  background-color: black;
   justify-items: center;
 }
 .homePageheader {
   display: grid;
   grid-auto-columns: 1fr;
-  background-color: black;
 }
 .FAQ{
   display: grid;
-  background-color: black;
 }
 .roadMapContainer {
   display: grid;
-  background-color: black;
 }
 .roadmap {
   width: 100%;
   padding-right: 10%;
   padding-left: 10%;
-  background-color: black;
 }
 .banner {
   grid-column: 1/5;
@@ -118,7 +109,6 @@
   max-height: 100%;
   z-index: 0;
   display: grid;
-  background-color: black;
 }
 .twitterBanner{
   width: 100%;
@@ -153,7 +143,6 @@
   display: grid;
   padding: 20px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  background-color: black;
   justify-content: center;
   align-content: center;
 }
@@ -163,7 +152,6 @@
   border-radius: 20px;
   position: relative;
 
-  background-color: black;
 }
 .aboutText {
   grid-row: 1;
@@ -171,7 +159,6 @@
   display: grid;
   border-radius: 20px;
   justify-content: center;
-  background-color: black;
 }
 .aboutHeader {
   grid-row: 1;
