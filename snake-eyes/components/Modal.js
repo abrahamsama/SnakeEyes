@@ -24,9 +24,8 @@ export default function Modal({ show, onClose, children }) {
               className={styles.closeModal}
               href="#"
               onClick={handleCloseClick}
-              
             >
-              
+              x
             </a>
           </div>
           <div className={styles.body}>{children}</div>
