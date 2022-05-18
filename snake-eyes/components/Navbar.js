@@ -8,7 +8,7 @@ export default function Navbar({ children }) {
   const [showModal, setShowModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const openMenu = () => setIsOpen(!isOpen);
-  var currentState = "notDisplaying";
+  const handleClose = () => setShowModal(false);
   return (
     <>
       <header className={homestyles.header}>
@@ -103,13 +103,13 @@ export default function Navbar({ children }) {
             onClose={() => setShowModal(false)}
           >
             <Link href="#about_us">
-              <h1 className={homestyles.modalItem1}>About</h1>
+              <h1 className={homestyles.modalItem1} onClick={() => setShowModal(false)}>About</h1>
             </Link>
             <Link href="#roadmap">
-              <h1 className={homestyles.modalItem4}>Road Map</h1>
+              <h1 className={homestyles.modalItem4} onClick={() => setShowModal(false)}>Road Map</h1>
             </Link>
             <Link href="#FAQ">
-              <h1 className={homestyles.modalItem2}>FAQ</h1>
+              <h1 className={homestyles.modalItem2} onClick={() => setShowModal(false)}>FAQ</h1>
             </Link>
             <h1 className={homestyles.modalItem3}>Buy</h1>
             
