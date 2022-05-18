@@ -183,6 +183,9 @@
 .abHeader {
   grid-row: 2;
 }
+.headerText {
+  padding-left: 20px;
+}
 .homePageBanner {
   grid-row: 1;
   max-width: 100%;

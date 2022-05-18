@@ -17,6 +17,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 
+
 <meta name="viewport" content="width=device-width, intital-scale=1.0" />;
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
@@ -71,7 +72,7 @@ export default function Home() {
   );
 
   const [showModal, setShowModal] = useState(false);
-  const [showInfo, setInfo] = useState(false);
+  const[showInfo, setInfo] = useState(false);
   var currentState = "notDisplaying";
   const [refCallback, slider, sliderNode] = useKeenSlider(
     {
@@ -144,49 +145,48 @@ export default function Home() {
           </Modal>
         </div> */}
         <div>
-          <h1>Stats</h1>
+          <h1 className={styles.headerText}>Stats</h1>
         </div>
         <div className={styles.insideOfClubHouse}>
-          <img className={styles.inside} src="2-rustic_bar.png"></img>
+          <img className={styles.inside}
+          src="2-rustic_bar.png"
+          ></img>
         </div>
         <div className={styles.aboutUs}>
           <div className={styles.aboutText}>
-            <h1>About Us</h1>
+          <h1>About Us</h1>
             <p>
-              There are millions of snakes in the world, but only 5,500 are
-              slithering onto the Solana block chain. Each boasting an array of
-              different styles, eccentricity, colors, and attitudes. <br></br>
-              <br></br> Born from a clutch of hundreds of hand drawn assets.
-              Prepared to strike and seize their place in the crypto-verse.
-              Wrangling the art, our dedicated in house artist insures the
-              highest quality snakes and variety.
-              <br></br>
-              <br></br> Watch your step and be ready to add a snake to your
-              collection
+            There are millions of snakes in the world, but only 5,500 are 
+            slithering onto the Solana block chain.  Each boasting an array of different 
+            styles, eccentricity, colors, and attitudes. <br></br>
+            <br></br>  Born from a clutch of hundreds of hand drawn assets.  
+            Prepared to strike and seize their place in the crypto-verse.  Wrangling the art, our dedicated in 
+            house artist insures the highest quality snakes and variety. 
+            <br></br>
+            <br></br> Watch your step and be ready to add a
+             snake to your collection
             </p>
           </div>
           <div className={styles.abSnake}>
-            <div className={styles.carousel}>
-              <div ref={sliderRef} className="keen-slider">
-                <div className="keen-slider__slide">
-                  <img className={styles.snake1} src="/snake1.jpg"></img>
-                </div>
-                <div className="keen-slider__slide">
-                  <img className={styles.snake2} src="/snake2.png"></img>
-                </div>
-                <div className="keen-slider__slide">
-                  <img className={styles.snake3} src="/snake3.png"></img>
-                </div>
-                <div className="keen-slider__slide">
-                  <img className={styles.snake3} src="/snake4.png"></img>
-                </div>
-              </div>
+          <div className={styles.carousel}>
+          <div ref={sliderRef} className="keen-slider">
+            <div className="keen-slider__slide">
+              <img className={styles.snake1} src="/snake1.jpg"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake2} src="/snake2.png"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake3} src="/snake3.png"></img>
+            </div>
+            <div className="keen-slider__slide">
+              <img className={styles.snake3} src="/snake4.png"></img>
             </div>
           </div>
         </div>
         </div>
         </div>
-        <h1 data-aos="fade-in">Meet the team</h1>
+        <h1 className={styles.headerText} data-aos="fade-in">Meet the team</h1>
         <div  className={styles.meetTheTeamContainer}>
           <div className={styles.cards}>
             <div data-aos="fade-in" className={styles.card}>
@@ -205,30 +205,27 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.roadMapContainer}>
-          roadmap
+          <h1 className={styles.headerText}>roadmap</h1>
           <img className={styles.roadmap} src="/roadmap.jpg"></img>
         </div>
         <div className={styles.FAQ}>
-          <h1>FAQ</h1>
+          <h1 className={styles.headerText}>FAQ</h1>
           <div className={styles.accordionContainer}>
-            <h1
-              onClick={() => {
-                var info = document.getElementById("info1");
-                if (currentState == "notDisplaying") {
-                  info.style.display = "block";
-                  currentState = "displaying";
-                } else {
-                  info.style.display = "none";
-                  currentState = "notDisplaying";
-                }
-              }}
-            >
-              How can I mint
-            </h1>
-            <p id="info1" className={styles.accordionInfo1}>
-              You can mint by...
-            </p>
-          </div>
+            <h1 onClick={ () => {
+              var info = document.getElementById("info1");
+              if(currentState == "notDisplaying"){
+                
+                info.style.display = "block";
+                currentState = "displaying"
+              }
+              else{
+                info.style.display = "none";
+                currentState = "notDisplaying"
+            }
+          }
+            }>How can I mint</h1>
+            <p id="info1" className={styles.accordionInfo1}>You can mint by...</p>
+            </div>
         </div>
       </div>
 
@@ -268,7 +265,7 @@ export default function Home() {
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
                     height="16"
-                    fill="white"
+                    fill="white"       
                     viewBox="0 0 16 16"
                   >
                     <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
