@@ -154,7 +154,7 @@ export default function Home() {
         </div>
         <div className={styles.aboutUs}>
           <div className={styles.aboutText}>
-          <h1>About Us</h1>
+          <h1 id="about_us">About Us</h1>
             <p>
             There are millions of snakes in the world, but only 5,500 are 
             slithering onto the Solana block chain.  Each boasting an array of different 
@@ -205,11 +205,11 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.roadMapContainer}>
-          <h1 className={styles.headerText}>roadmap</h1>
+          <h1 id="roadmap" className={styles.headerText}>roadmap</h1>
           <img className={styles.roadmap} src="/roadmap.jpg"></img>
         </div>
         <div className={styles.FAQ}>
-          <h1 className={styles.headerText}>FAQ</h1>
+          <h1 id="FAQ" className={styles.headerText}>FAQ</h1>
           <div className={styles.accordionContainer}>
             <h1 onClick={ () => {
               var info = document.getElementById("info1");

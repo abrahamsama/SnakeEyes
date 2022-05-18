@@ -29,7 +29,7 @@ export default function Navbar({ children }) {
             }
           >
             <li className={navstyles.navitem}>
-              <Link href="/about">
+              <Link href="#about_us">
                 <a
                   className={
                     isOpen === false
@@ -43,7 +43,21 @@ export default function Navbar({ children }) {
               </Link>
             </li>
             <li className={navstyles.navitem}>
-              <Link href="/FAQ">
+              <Link href="#roadmap">
+                <a
+                  className={
+                    isOpen === false
+                      ? navstyles.navlink
+                      : navstyles.navlink + " " + navstyles.active
+                  }
+                  onClick={openMenu}
+                >
+                  Road Map
+                </a>
+              </Link>
+            </li>
+            <li className={navstyles.navitem}>
+              <Link href="#FAQ">
                 <a
                   className={
                     isOpen === false
@@ -70,20 +84,6 @@ export default function Navbar({ children }) {
                 </a>
               </Link>
             </li>
-            <li className={navstyles.navitem}>
-              <Link href="/road-map">
-                <a
-                  className={
-                    isOpen === false
-                      ? navstyles.navlink
-                      : navstyles.navlink + " " + navstyles.active
-                  }
-                  onClick={openMenu}
-                >
-                  Road Map
-                </a>
-              </Link>
-            </li>
           </ul>
           <button
             className={
@@ -102,10 +102,17 @@ export default function Navbar({ children }) {
             show={showModal}
             onClose={() => setShowModal(false)}
           >
-            <h1 className={homestyles.modalItem1}>About Us</h1>
-            <h1 className={homestyles.modalItem2}>FAQ</h1>
+            <Link href="#about_us">
+              <h1 className={homestyles.modalItem1}>About</h1>
+            </Link>
+            <Link href="#roadmap">
+              <h1 className={homestyles.modalItem4}>Road Map</h1>
+            </Link>
+            <Link href="#FAQ">
+              <h1 className={homestyles.modalItem2}>FAQ</h1>
+            </Link>
             <h1 className={homestyles.modalItem3}>Buy</h1>
-            <h1 className={homestyles.modalItem4}>Road Map</h1>
+            
             <div className={homestyles.modalIcons}>
               <div className={homestyles.modalIcon1}>
                 <a href="https://discord.gg/uCkHGmGaC7" target={"_blank"}>
