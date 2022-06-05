@@ -1,3 +1,4 @@
+import { borderBottom } from "@mui/system";
 import { useState } from "react";
 
 export default function Accordion(props) {
@@ -11,21 +12,21 @@ export default function Accordion(props) {
     <div
       style={{
         width: "100%",
-        marginBottom: "15px",
         lineHeight: "15px",
-        border: "1px solid rgba(209, 213, 219, 0.5)"
+        borderBottom: "1px solid black",
       }}
     >
       <button
         style={{
+          textAlign: "center",
+          fontSize: "30px",
+          fontFamily: "LG",
           width: "100%",
           position: "relative",
-          textAlign: "left",
-          padding: "4px",
           border: "none",
           background: "transparent",
           outline: "none",
-          cursor: "pointer"
+          cursor: "pointer",
         }}
         onClick={toggle}
         type="button"
@@ -33,9 +34,13 @@ export default function Accordion(props) {
         <p>{props.title}</p>
       </button>
       <div
-        style={{ display: isShowing ? "block" : "none", padding: "5px" }}
+        style={{
+          display: isShowing ? "block" : "none",
+          paddingBottom: "10px",
+          fontSize: "18px",
+        }}
         dangerouslySetInnerHTML={{
-          __html: props.content
+          __html: props.content,
         }}
       />
     </div>
