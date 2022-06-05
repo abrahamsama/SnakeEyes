@@ -170,8 +170,9 @@ export default function Home() {
         <div className={styles.enterPortalOverlay} id={"modal"}>
           <div className={styles.container}>
             <Head>
-              <title>Snake Eyes Home</title>
-              <link rel="icon" href="/favicon.ico" />
+              <title>Snake Eyes</title>
+              <link rel="icon" href="/images/favicon.png" type="image/png" />
+              <link rel="shortcut icon" href="/favicon.ico" />
               <link
                 href="https://unpkg.com/aos@2.3.1/dist/aos.css"
                 rel="stylesheet"
