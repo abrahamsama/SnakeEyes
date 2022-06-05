@@ -266,7 +266,6 @@
   grid-column: 1/2;
   z-index: 1;
   justify-self: center;
-  animation: fadeIn 6s;
 }
 .gridBtn {
   grid-row: 4;
