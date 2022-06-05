@@ -227,7 +227,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={styles.logoGrid}>
-                <img className={styles.logo} src="/finalLogoWithSE.png" />
+                <img className={styles.logo} src="public/finalLogoWithSE.png" />
               </div>
               <a className={styles.gridBtn}>
                 <button
