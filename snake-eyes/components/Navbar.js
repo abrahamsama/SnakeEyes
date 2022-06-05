@@ -17,7 +17,7 @@ export default function Navbar({ children }) {
             <a className={navstyles.navlogo}>
               <img
                 className={homestyles.headerLogo}
-                src="/finallogoWithSE.png"
+                src="/headerlogo.png"
               ></img>
             </a>
           </Link>

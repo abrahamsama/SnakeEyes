@@ -19,7 +19,7 @@ export default function Modal({ show, onClose, children }) {
       <div className={styles.overlay}>
         <div className={styles.modal}>
           <div className={styles.header}>
-            <img className={styles.SEheader} src="/finalLogoWithSE.png"></img>
+            <img className={styles.SEheader} src="/headerlogo.png"></img>
             <a
               className={styles.closeModal}
               href="#"
